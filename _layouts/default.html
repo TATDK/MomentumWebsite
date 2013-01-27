@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game{{ page.title }}</title>
+    {% for js in page.javascripts %}<script type="text/javascript" src="/scripts/{{ js }}.js"></script>
+    {% endfor %}
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    {% for css in page.stylesheets %}<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/{{ css }}.css" />
+    {% endfor %}
+    {% for he in page.headElements %}{{ he }}
+    {% endfor %}
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header">
+		<ul id="menu">
+			<li href="/">Front</li>
+			<li href="/Blog">Blog</li>
+			<li href="/Download">Download</li>
+			<li href="/Contact">Contact</li>
+		</ul>
+	</div>
+    <div id="body">
+    {{ content }}
+	</div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+</body>
+</html>
