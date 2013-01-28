@@ -19,7 +19,7 @@ div#header {
 }
 div#body,
 div#footer {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.55);
     border-radius: 15px;
     border-left:thin solid #999999;
     border-top:thin solid #999999;
