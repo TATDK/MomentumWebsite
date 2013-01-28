@@ -11,7 +11,11 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("ul#menu li").click(function() {
-                if ($(this).attr('href') !== undefined) window.location = '/MomentumWebsite' + $(this).attr('href');
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href + (a.href != '/' ? '.html' : '');
+                }
             });
         });
     </script>
@@ -27,7 +31,7 @@
     <!-- HEADER -->
     <div id="header">
         <ul id="menu">
-            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Download">Download</li><li href="/Contact">Contact</li>
+            <li href="/">Front</li><li href="http://momentumthegame.blogspot.dk/" target="_blank">Blog</li><li href="/Download">Download</li><li href="/Contact">Contact</li>
         </ul>
     </div>
     <div id="body">

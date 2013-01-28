@@ -4,20 +4,27 @@
     font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 html {
-    background: white url("../images/bg.png");
+    background: #eeeeee url('../images/bg.png');
 }
-#header,
-#body,
-#footer {
+div#header,
+div#body,
+div#footer {
     width: 980px;
     margin: auto;
     padding: 20px;
 }
-#header {
+div#header {
     text-align: center;
     height: 50px;
 }
-#footer {
+div#body {
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    border-left:thin solid #999999;
+    border-top:thin solid #999999;
+    box-shadow: #333333 3px 3px 5px;
+}
+div#footer {
     text-align: center;
 }
 p {
