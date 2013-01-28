@@ -14,7 +14,7 @@
                 if ($(this).attr('href') !== undefined) {
                     var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
                     if (a.target === '_blank') b.open(a.href);
-                    else b.location = a.href + (a.href != '/' ? '.html' : '');
+                    else b.location = '/MomentumWebsite' + a.href;
                 }
             });
         });
