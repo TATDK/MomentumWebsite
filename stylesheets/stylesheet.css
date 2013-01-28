@@ -17,7 +17,8 @@ div#header {
     text-align: center;
     height: 50px;
 }
-div#body {
+div#body,
+div#footer {
     background: rgba(255,255,255,0.8);
     border-radius: 15px;
     border-left:thin solid #999999;
@@ -25,6 +26,8 @@ div#body {
     box-shadow: #333333 3px 3px 5px;
 }
 div#footer {
+    margin-top:10px;
+    padding: 10px 20px;
     text-align: center;
 }
 p {
