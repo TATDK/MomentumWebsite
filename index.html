@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<h3>Latest blog posts</h3>
-{% for post in site.posts limit 5 %}{% if post != site.posts[0] %}<hr />{% endif %}
+<h3>Latest blog post</h3>
+{% for post in site.posts limit 1 %}{% if post != site.posts[0] %}<hr />{% endif %}
     <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span class="blog_date">{{ post.date | date_to_string }}</span><br />
     {{ post.content | strip_html | truncatewords:25}}<br />
     <a href="{{ post.url }}">Read more...</a>
