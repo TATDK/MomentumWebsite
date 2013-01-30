@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game - </title>
+    <script type="text/javascript" src="/scripts/jQuery.190.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h3>Latest blog post</h3>
+<a href="/blog/2013/01/30/new-company-name%21.html">New Company Name!</a> <span class="blog_date">30 Jan 2013</span><br />
+Hello everyone hope you are all having a great week. Here at Momentum we are happy to announce the company name and logo. It&rsquo;s all...<br />
+<a href="/blog/2013/01/30/new-company-name%21.html">Read more...</a>
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games
+<div style="position:fixed;bottom:0;right:0;"><img src="/images/logo.png" /></div></div>
+</body>
+</html>

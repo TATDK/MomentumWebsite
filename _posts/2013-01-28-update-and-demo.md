@@ -9,7 +9,7 @@ tags:
 <p>At team Momentum we are as always working hard on the game and want to share as much as possible with you, so concept art on our main is soon ready and other funny things, be sure to like our Facebook page if you haven't already, <a href="http://www.facebook.com/MomentumGameProject">http://www.facebook.com/MomentumGameProject</a>.</p>
 <p>Company soon has its name and logo ready, we are very excited to see what you think of it and we hope you like it.</p>
 <p>February 2, 2013 is going to be a big day for the company because we have open house at our school and we are going to show some of our ideas and hopefully a playable version of the game.</p>
-<p>Here is the link to our demo have fun.<br /><a href="http://torvestergaard.com/momentum/">http://torvestergaard.com/momentum/</a></p>
+<p>Here is the link to our demo have fun.<br /><a href="/Demo">http://momentumthegame.com/Demo</a></p>
 <p>
     <table border="0" cellspacing="0" style="text-align:center">
         <tr>
