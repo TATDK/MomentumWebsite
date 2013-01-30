@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game{% if page.title != '' %} - {{ page.title }}{% endif %}</title>
+    {% for js in page.javascripts %}<script type="text/javascript" src="/scripts/{{ js }}.js"></script>
+    {% endfor %}
+    <script type="text/javascript" src="/scripts/jQuery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = '/MomentumWebsite' + a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    {% for css in page.stylesheets %}<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/{{ css }}.css" />
+    {% endfor %}
+    {% for he in page.headElements %}{{ he }}
+    {% endfor %}
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="http://momentumthegame.blogspot.dk/" target="_blank">Blog</li><li href="/Download">Download</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h1>{{ page.title }}</h1>
+    {{ content }}{% if page.tags.size > 0 %}<br />
+    <small><strong>Tags:</strong> {% for tag in page.tags %}{% if page.tags[0] != tag %}, {% endif %}{{ tag }}{% endfor %}</small>{% endif %}
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+</body>
+</html>

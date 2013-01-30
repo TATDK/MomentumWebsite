@@ -30,11 +30,25 @@ div#footer {
     padding: 10px 20px;
     text-align: center;
 }
+hr {
+    margin: 10px 0px;
+    box-shadow: #000000 1px 1px 2px;
+}
+ul#blogposts, ul#menu {
+    list-style-type: none;
+}
+ul#blogposts li {
+    margin-right: 6px;
+}
+ul#blogposts li:before {
+    content: "\00BB ";
+}
+span.blog_date {
+    color:#999999;
+    font-size:small;
+}
 p {
     margin-bottom: 10px;
-}
-ul#menu {
-    list-style-type: none;
 }
 ul#menu li {
     width: 150px;
