@@ -4,7 +4,7 @@
     font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 html {
-    background: #eeeeee url('../images/bg.png');
+    background: #000000 url('../images/bg.png');
 }
 div#header,
 div#body,
