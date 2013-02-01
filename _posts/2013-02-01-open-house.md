@@ -2,6 +2,7 @@
 layout: post
 category: blog
 tags:
+ - art
  - concept art
  - open house
 ---
@@ -18,7 +19,7 @@ tags:
         </td>
         <td style="text-align:center;font-weight:bold;float:right">
             <img src="/images/posts/concept_mainCharacter.jpg" />
-            <p><small>Here is a concept drawing of our beloved hero</small></p>
+            <p><small>Concept drawing of our beloved hero</small></p>
         </td>
     </tr>
 </table>
