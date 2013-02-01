@@ -30,6 +30,8 @@ div#footer {
     margin-bottom: 15px;
     padding: 10px 20px;
     text-align: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 hr {
     margin: 10px 0px;
