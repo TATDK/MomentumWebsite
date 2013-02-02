@@ -1,8 +1,42 @@
----
-layout: default
----
-<h1>Momentum</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game</title>
+    <script type="text/javascript" src="/scripts/jQuery.190.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h1>Momentum</h1>
 <h3>Latest blog post</h3>
-<a href="{{ BASE_PATH }}{{ site.posts[0].url }}">{{ site.posts[0].title }}</a> <span class="blog_date">{{ site.posts[0].date | date_to_string }}</span><br />
-{{ site.posts[0].content | strip_html | truncatewords:25}}<br />
-<a class="readmore" href="{{ site.posts[0].url }}">Read more...</a>
+<a href="/blog/2013/02/01/open-house.html">Open House</a> <span class="blog_date">01 Feb 2013</span><br />
+Hello everyone! Here we are again to tell you about the awesome stuff happing at Shoon Games. This Saturday between 10 am and 2 pm...<br />
+<a class="readmore" href="/blog/2013/02/01/open-house.html">Read more...</a>
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+    <div id="logo"></div>
+</body>
+</html>

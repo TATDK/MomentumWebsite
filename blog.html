@@ -1,11 +1,63 @@
----
-layout: default
-permalink: /Blog.html
-title: Blog posts
----
-<h1>Blog posts</h1>
-{% for post in site.posts %}{% if post != site.posts[0] %}<hr />{% endif %}
-    <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span class="blog_date">{{ post.date | date_to_string }}</span><br />
-    {{ post.content | strip_html | truncatewords:25}}<br />
-    <a class="readmore" href="{{ post.url }}">Read more...</a>
-{% endfor %}</ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game - Blog posts</title>
+    <script type="text/javascript" src="/scripts/jQuery.190.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h1>Blog posts</h1>
+
+    <a href="/blog/2013/02/01/open-house.html">Open House</a> <span class="blog_date">01 Feb 2013</span><br />
+    Hello everyone! Here we are again to tell you about the awesome stuff happing at Shoon Games. This Saturday between 10 am and 2 pm...<br />
+    <a class="readmore" href="/blog/2013/02/01/open-house.html">Read more...</a>
+<hr />
+    <a href="/blog/2013/01/30/new-company-name%21.html">New Company Name!</a> <span class="blog_date">30 Jan 2013</span><br />
+    Hello everyone hope you are all having a great week. Here at Momentum we are happy to announce the company name and logo. It&rsquo;s all...<br />
+    <a class="readmore" href="/blog/2013/01/30/new-company-name%21.html">Read more...</a>
+<hr />
+    <a href="/blog/2013/01/28/update-and-demo.html">Update And Demo</a> <span class="blog_date">28 Jan 2013</span><br />
+    Hello everybody, had a good weekend? We have a main mechanic proto type ready for you are you excited? We hope you are.At team Momentum...<br />
+    <a class="readmore" href="/blog/2013/01/28/update-and-demo.html">Read more...</a>
+<hr />
+    <a href="/blog/2013/01/18/tease.html">Tease</a> <span class="blog_date">18 Jan 2013</span><br />
+    A little sneak peek of what is going on in the world of Momentum.<br />
+    <a class="readmore" href="/blog/2013/01/18/tease.html">Read more...</a>
+<hr />
+    <a href="/blog/2013/01/18/first-look.html">First Look</a> <span class="blog_date">18 Jan 2013</span><br />
+    Soon we will be posting a lot of art, until then enjoy this awesome robot.<br />
+    <a class="readmore" href="/blog/2013/01/18/first-look.html">Read more...</a>
+<hr />
+    <a href="/blog/2013/01/09/getting-started.html">Getting Started</a> <span class="blog_date">09 Jan 2013</span><br />
+    Hello, we are a group of students from GameIT College, located in Denmark. This blog is for anything related to our current project, Momentum. We...<br />
+    <a class="readmore" href="/blog/2013/01/09/getting-started.html">Read more...</a>
+</ul>
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+    <div id="logo"></div>
+</body>
+</html>
