@@ -49,6 +49,11 @@ div#logo {
     width: 250px;
     height: 88px;
 }
+div#gallery a {
+    float: left;
+    margin: 5px;
+    border: thin solid #666666;
+}
 span.blog_date {
     color: #999999;
     font-size: small;

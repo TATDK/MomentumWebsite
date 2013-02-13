@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game - Gallery</title>
+    <script type="text/javascript" src="/scripts/jQuery.172.min.js"></script>
+    
+    <script type="text/javascript" src="/scripts/lightbox.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/lightbox.css" />
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h1>Gallery</h1>
+<div id="gallery">
+    <a href="/images/gallery/characterDevices.jpg" rel="lightbox[gallery]"><img src="/images/gallery/characterDevices_thumb.jpg" /></a>
+    <a href="/images/gallery/charactersDevice.jpg" rel="lightbox[gallery]"><img src="/images/gallery/charactersDevice_thumb.jpg" /></a>
+    <a href="/images/gallery/conceptCharacter1.jpg" rel="lightbox[gallery]"><img src="/images/gallery/conceptCharacter1_thumb.jpg" /></a>
+    <a href="/images/gallery/conceptCharacter2.jpg" rel="lightbox[gallery]"><img src="/images/gallery/conceptCharacter2_thumb.jpg" /></a>
+    <a href="/images/gallery/conceptCharacter3.jpg" rel="lightbox[gallery]"><img src="/images/gallery/conceptCharacter3_thumb.jpg" /></a>
+    <a href="/images/gallery/robot.jpg" rel="lightbox[gallery]"><img src="/images/gallery/robot_thumb.jpg" /></a>
+    <a href="/images/gallery/smallRobot.jpg" rel="lightbox[gallery]"><img src="/images/gallery/smallRobot_thumb.jpg" /></a>
+</div>
+<div style="clear:both"></div>
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+    <div id="logo"></div>
+</body>
+</html>
