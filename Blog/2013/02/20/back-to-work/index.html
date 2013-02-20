@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Momentum the Game" />
+    <title>Momentum the Game - Back To Work</title>
+    <script type="text/javascript" src="/scripts/jQuery.190.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul#menu li").click(function() {
+                if ($(this).attr('href') !== undefined) {
+                    var a = { href: $(this).attr('href'), target: $(this).attr('target') ? $(this).attr('target') : ''},b = window;
+                    if (a.target === '_blank') b.open(a.href);
+                    else b.location = a.href;
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+    
+</head>
+
+<body>
+    <div id="header">
+        <ul id="menu">
+            <li href="/">Front</li><li href="/Blog">Blog</li><li href="/Gallery">Gallery</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+        </ul>
+    </div>
+    <div id="body">
+    <h1>Back To Work</h1>
+    <div style='width:150px;text-align:center;font-weight:bold;float:right'>
+    <img src='/images/posts/smallRobot.jpg' width='150px' />
+    <p><small>Here is a concept drawing of a small robot</small></p>
+</div><p>We are back from holiday;</p><p>We had a good holiday here at Shoon Games and we hope that you had a good week as well.</p><p>Something big is going to happen this week for Shoon Games, we hope to get our microphones on Friday. </p><p>Monday the 25th February,  there will be a judge coming by from the game industry, whom will take a look at our game and hopefully give us some feedback, we are looking forward to this, and once again we will have a busy week here at Shoon Games.</p><p>As always, here is some artwork from our lovely art team.</p><p>
+    Stay tuned for updates later this week!<br />
+    Andreas – Shoon Games PR team.
+</p><br />
+    <small><strong>Tags:</strong> Concept art, Update</small><br />
+    <small><strong>Related posts:</strong><br /><a href="/Blog/2013/02/01/open-house">Open House</a> <span class="blog_date">01 Feb 2013</span><br /><a href="/Blog/2013/01/30/new-company-name%21">New Company Name!</a> <span class="blog_date">30 Jan 2013</span><br /><a href="/Blog/2013/01/28/update-and-demo">Update And Demo</a> <span class="blog_date">28 Jan 2013</span><br /><a href="/Blog/2013/01/18/first-look">First Look</a> <span class="blog_date">18 Jan 2013</span></small>
+    </div>
+    <div id="footer">&copy; 2013 Shoon Games</div>
+    <div id="logo"></div>
+</body>
+</html>
