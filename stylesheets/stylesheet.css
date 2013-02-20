@@ -49,10 +49,14 @@ div#logo {
     width: 250px;
     height: 88px;
 }
+div#gallery {
+    position: relative;
+}
 div#gallery a {
     float: left;
     margin: 5px;
     border: thin solid #666666;
+    position: absolute;
 }
 span.blog_date {
     color: #999999;
