@@ -5,33 +5,10 @@ title: Gallery
 jQueryVersion: 172
 javascripts:
  - 'lightbox'
+ - 'gallery'
 stylesheets:
  - 'lightbox'
-images:
- - src: 'characterDevices'
-   left: 20
-   top: 0
- - src: 'charactersDevice'
-   left: 330
-   top: 0
- - src: 'conceptCharacter1'
-   left: 640
-   top: 0
- - src: 'conceptCharacter2'
-   left: 20
-   top: 337
- - src: 'conceptCharacter3'
-   left: 330
-   top: 282
- - src: 'robot'
-   left: 640
-   top: 693
- - src: 'smallRobot'
-   left: 20
-   top: 588
 ---
 <h1>Gallery</h1>
-<div id="gallery" style="height:1160px">{% for image in page.images %}
-    <a href="/images/gallery/{{ image.src }}.jpg" rel="lightbox[gallery]" style="left:{{ image.left }}px;top:{{ image.top }}px"><img src="/images/gallery/{{ image.src }}_thumb.jpg" /></a>{% endfor %}
-</div>
+<div id="gallery"></div>
 <div style="clear:both"></div>
