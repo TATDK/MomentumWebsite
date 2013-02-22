@@ -57,6 +57,10 @@ div#gallery a {
     margin: 5px;
     border: thin solid #666666;
     position: absolute;
+    opacity: 0.7;
+}
+div#gallery a:hover {
+    opacity: 1;
 }
 span.blog_date {
     color: #999999;
