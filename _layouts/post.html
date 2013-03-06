@@ -5,18 +5,24 @@
 </head>
 
 <body>
-    <div id="header">
-        <ul id="menu">
-            {% include menu.html %}
-        </ul>
+    {% include menu.html %}
+    <div class="row-fluid">
+        <div class="span8 offset2 hero-unit">
+            <h1>{{ page.title }}</h1>
+            {{ content }}{% if page.tags.size > 0 %}<br />
+            <small class="normal-lines">
+                <strong>Tags:</strong> {% for tag in page.tags %}{% if page.tags[0] != tag %}, {% endif %}{{ tag | capitalize }}{% endfor %}
+            </small>{% endif %}{% if site.related_posts.size > 0 %}<br />
+            <small class="normal-lines">
+                <strong>Related posts:</strong>
+                {% for related in site.related_posts %}<br /><a href="{{ BASE_PATH }}{{ related.url }}">{{ related.title }}</a> <span class="blog_date">{{ related.date | date_to_string }}</span>{% endfor %}
+            </small>{% endif %}
+        </div>
     </div>
-    <div id="body">
-    <h1>{{ page.title }}</h1>
-    {{ content }}{% if page.tags.size > 0 %}<br />
-    <small><strong>Tags:</strong> {% for tag in page.tags %}{% if page.tags[0] != tag %}, {% endif %}{{ tag | capitalize }}{% endfor %}</small>{% endif %}{% if site.related_posts.size > 0 %}<br />
-    <small><strong>Related posts:</strong>{% for related in site.related_posts %}<br /><a href="{{ BASE_PATH }}{{ related.url }}">{{ related.title }}</a> <span class="blog_date">{{ related.date | date_to_string }}</span>{% endfor %}</small>{% endif %}
+    <div class="row-fluid">
+        <div id="footer" class="span8 offset2 hero-unit">{% include footer.html %}</div>
     </div>
-    <div id="footer">{% include footer.html %}</div>
     <div id="logo"></div>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
 </body>
 </html>

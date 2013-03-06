@@ -1,1 +1,13 @@
-<li href="/">Front</li><li href="/Blog">Blog</li><li href="/Gallery">Gallery</li><li href="/Demo">Demo</li><li href="/Contact">Contact</li>
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="/">Momentum</a>
+        <ul class="nav">
+            <li{% if page.url == "/" %} class="active"{% endif %}><a href="/">Home</a></li>
+            <li{% if page.url == "/Blog/" or page.categories[0] == "blog" %} class="active"{% endif %}><a href="/Blog">Blog</a></li>
+            <li{% if page.url == "/Gallery/" %} class="active"{% endif %}><a href="/Gallery">Gallery</a></li>
+            <li{% if page.url == "/Demo/" %} class="active"{% endif %}><a href="/Demo">Demo</a></li>
+            <li{% if page.url == "/Contact/" %} class="active"{% endif %}><a href="/Contact">Contact</a></li>
+        </ul>
+    </div>
+</div>

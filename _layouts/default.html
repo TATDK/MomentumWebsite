@@ -5,15 +5,14 @@
 </head>
 
 <body>
-    <div id="header">
-        <ul id="menu">
-            {% include menu.html %}
-        </ul>
+    {% include menu.html %}
+    <div class="row-fluid">
+        <div class="span8 offset2 hero-unit">{{ content }}</div>
     </div>
-    <div id="body">
-    {{ content }}
+    <div class="row-fluid">
+        <div id="footer" class="span8 offset2 hero-unit">{% include footer.html %}</div>
     </div>
-    <div id="footer">{% include footer.html %}</div>
     <div id="logo"></div>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
 </body>
 </html>

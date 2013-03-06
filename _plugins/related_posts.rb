@@ -55,7 +55,6 @@ module RelatedPosts
       end.collect {|post,freq| post}
     end
   end
-
 end
 
 module Jekyll
