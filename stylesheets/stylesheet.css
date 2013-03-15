@@ -20,6 +20,10 @@ div#gallery a {
 div#gallery a:hover {
     opacity: 1;
 }
+div#gallery img {
+    max-width: none;
+    width: 300px;
+}
 div#footer {
     padding: 10px;
     text-align: center;
@@ -43,4 +47,7 @@ a.readmore {
 }
 .normal-lines {
     line-height: normal;
+}
+.hero-unit {
+    border: thin solid #999;
 }

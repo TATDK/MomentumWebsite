@@ -22,3 +22,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.min.css" />
     {% for css in page.stylesheets %}<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/{{ css }}.css" />
     {% endfor %}
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/da_DK/all.js#xfbml=1&appId=169786276505949";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
