@@ -1,9 +1,9 @@
 var gallery = {
-    b: {
-        a: [0,0,0],
-        b: 0,
-        c: [20,330,640],
-        d: 0
+    data: {
+        rowHeight: [0,0,0],
+        row: 0,
+        rowLeft: [0,310,620],
+        totalHeight: 0
     },
     h: [],
     load: function(a) {
@@ -19,23 +19,28 @@ var gallery = {
         else console.error('Unknown type',b.type,b);
     },
     loadImage: function(a,b) {
-        var c = $('#gallery'),d = new Image(),e = this;
+        var c = $('#gallery'),d = new Image(),self = this;
         d.onload = function() {
             var f = $("<a></a>")
                     .attr('href','/images/gallery/' + a + '.' + b)
                     .attr('rel','lightbox[gallery]')
-                    .css('top',e.b.a[e.b.b]+'px')
-                    .css('left',e.b.c[e.b.b]+'px')
+                    .css('top',self.data.rowHeight[self.data.row]+'px')
+                    .css('left',self.data.rowLeft[self.data.row]+'px')
                     .append(d);
-            e.b.a[e.b.b] += this.height+10;
-            if (e.b.d < e.b.a[e.b.b]) {
-                e.b.d = e.b.a[e.b.b]+10
-                c.css('height',e.b.d+'px');
+            console.log(jQuery.extend(true,{image: a,filetype: b,imageSize: { height: this.height, width: this.width }},self.data));
+            self.data.rowHeight[self.data.row] += this.height+10;
+            if (self.data.totalHeight < self.data.rowHeight[self.data.row]) {
+                self.data.totalHeight = self.data.rowHeight[self.data.row]+10;
+                c.css('height',self.data.totalHeight+'px');
             }
-            e.b.b++;
-            if (e.b.b == 3) e.b.b = 0;
+            var tmp = {row:-1,height:-1};
+            for (var i in self.data.rowHeight) {
+                if (tmp.height < 0 || tmp.height > self.data.rowHeight[i])
+                    tmp = {row: i,height: self.data.rowHeight[i]};
+            }
+            self.data.row = tmp.row;
             c.append(f);
-            e.load();
+            self.load();
         };
         d.src = '/images/gallery/' + a + '_thumb.' + b;
     },
@@ -61,6 +66,9 @@ $(document).ready(function() {
         { src: 'conceptCharacter2', filetype: 'jpg', type: 'image' },
         { src: 'conceptCharacter3', filetype: 'jpg', type: 'image' },
         { src: 'robot',             filetype: 'jpg', type: 'image' },
-        { src: 'smallRobot',        filetype: 'jpg', type: 'image' }
+        { src: 'smallRobot',        filetype: 'jpg', type: 'image' },
+        { src: 'worldConcept1',     filetype: 'jpg', type: 'image' },
+        { src: 'worldConcept2',     filetype: 'jpg', type: 'image' },
+        { src: 'survivalConcept',   filetype: 'jpg', type: 'image' }
     ]);
 });
